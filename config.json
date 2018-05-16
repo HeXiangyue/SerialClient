@@ -1,0 +1,9 @@
+{
+  "portName": "COM6",
+  "bitRate": 115200,
+  "playbackDuration": 5,
+  "logFile": "reader.log",
+
+  "stopKeyword": "SerialAuto Case Complete",
+  "caseTimeoutMinutes": 5
+}
