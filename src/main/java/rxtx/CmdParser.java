@@ -19,7 +19,7 @@ public class CmdParser {
     }
 
     private void initOptions() {
-        Option configFileOption = Option.builder("f").longOpt("file").desc("Configuration File Path").build();
+        Option configFileOption = Option.builder("f").longOpt("file").desc("Configuration File Path").hasArgs().build();
         this.opts.addOption(configFileOption);
     }
 

@@ -64,6 +64,7 @@ public class LogMonitor {
      * Force stop the log monitor executor
      */
     public void forceStop() {
+        logger.info("Stop the log monitor");
         if (null != executorService) {
             executorService.shutdownNow();
         }

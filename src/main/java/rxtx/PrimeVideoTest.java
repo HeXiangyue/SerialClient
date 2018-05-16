@@ -99,7 +99,6 @@ public class PrimeVideoTest {
             }
 
             if (stopWait) {
-                logger.info("Clean environments...");
                 client.getReaderThread().interrupt();
                 this.logMonitor.forceStop();
                 break;
@@ -121,13 +120,9 @@ public class PrimeVideoTest {
     public static void main(String[] args) throws PortInUseException, NoSuchPortException, NotASerialPort, UnsupportedCommOperationException, SerialPortOutputStreamCloseFailure, InterruptedException, IOException {
         PrimeVideoTest primeVideoTest = new PrimeVideoTest(args);
 
-        logger.info("First Case Start");
-
         primeVideoTest.recordPortOutput();
         primeVideoTest.runTest();
         primeVideoTest.waitTestComplete();
         primeVideoTest.closeSerialPort();
-
-        logger.info("First Case Done");
     }
 }
